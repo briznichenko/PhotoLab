@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10A000000000000000000001 /* PhotoSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B000000000000000000001 /* PhotoSelectionView.swift */; };
+		10A000000000000000000002 /* PhotoEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B000000000000000000002 /* PhotoEditingView.swift */; };
+		10A000000000000000000003 /* PhotoComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B000000000000000000003 /* PhotoComparisonView.swift */; };
+		10A000000000000000000004 /* ImageCanvasViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B000000000000000000004 /* ImageCanvasViews.swift */; };
 		29199AFCC2EC5122025DE1FC /* EditorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368D5290A82BA6BA3288DA /* EditorStore.swift */; };
 		5A81660AC556EEC1EB4445FE /* sample-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8FA34BD0D959852B1056C /* sample-1.jpg */; };
 		632ADF2A84F58B893A68766F /* ImageEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F939E2A7CC30C0CC9D9A4BE /* ImageEngineTests.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10B000000000000000000001 /* PhotoSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotoSelectionView.swift; sourceTree = "<group>"; };
+		10B000000000000000000002 /* PhotoEditingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotoEditingView.swift; sourceTree = "<group>"; };
+		10B000000000000000000003 /* PhotoComparisonView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotoComparisonView.swift; sourceTree = "<group>"; };
+		10B000000000000000000004 /* ImageCanvasViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageCanvasViews.swift; sourceTree = "<group>"; };
 		049A404EE38D27358AAE5D8A /* sample-2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = "sample-2.jpg"; path = "Fixtures/sample-2.jpg"; sourceTree = "<group>"; };
 		049B211B53A98808DA277421 /* PhotoLabApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotoLabApp.swift; sourceTree = "<group>"; };
 		0FCC17DDBFFF2AA942E283DE /* CameraPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
@@ -108,6 +116,10 @@
 			children = (
 				0FCC17DDBFFF2AA942E283DE /* CameraPicker.swift */,
 				41AE63EFCFAE33083BE48B7E /* ContentView.swift */,
+				10B000000000000000000001 /* PhotoSelectionView.swift */,
+				10B000000000000000000002 /* PhotoEditingView.swift */,
+				10B000000000000000000003 /* PhotoComparisonView.swift */,
+				10B000000000000000000004 /* ImageCanvasViews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +252,10 @@
 			files = (
 				F22A242861B902DF7C9A27B1 /* CameraPicker.swift in Sources */,
 				FD0F8C19426D610F69D61ABB /* ContentView.swift in Sources */,
+				10A000000000000000000001 /* PhotoSelectionView.swift in Sources */,
+				10A000000000000000000002 /* PhotoEditingView.swift in Sources */,
+				10A000000000000000000003 /* PhotoComparisonView.swift in Sources */,
+				10A000000000000000000004 /* ImageCanvasViews.swift in Sources */,
 				67D2114362B9A48F05506B56 /* EditorModels.swift in Sources */,
 				29199AFCC2EC5122025DE1FC /* EditorStore.swift in Sources */,
 				EA0FAC1CB5A6F8088C1146A2 /* ImageEngine.swift in Sources */,
