@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29199AFCC2EC5122025DE1FC /* EditorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368D5290A82BA6BA3288DA /* EditorStore.swift */; };
+		5A81660AC556EEC1EB4445FE /* sample-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8FA34BD0D959852B1056C /* sample-1.jpg */; };
+		632ADF2A84F58B893A68766F /* ImageEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F939E2A7CC30C0CC9D9A4BE /* ImageEngineTests.swift */; };
+		67D2114362B9A48F05506B56 /* EditorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C620FC7ED2C4453E6526F /* EditorModels.swift */; };
+		6C9FF5A949D183105A471CCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3343E2A679836AB0B7321E34 /* Foundation.framework */; };
+		6DE18989831BBD6C218ECF95 /* sample-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049A404EE38D27358AAE5D8A /* sample-2.jpg */; };
+		A3E92230BD5D7BEF10C25F2A /* PhotoLabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B211B53A98808DA277421 /* PhotoLabApp.swift */; };
+		C0E0E6B6729934603BE0AD22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3343E2A679836AB0B7321E34 /* Foundation.framework */; };
+		EA0FAC1CB5A6F8088C1146A2 /* ImageEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356013D0F157FED852C01CD4 /* ImageEngine.swift */; };
+		F22A242861B902DF7C9A27B1 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC17DDBFFF2AA942E283DE /* CameraPicker.swift */; };
+		FD0F8C19426D610F69D61ABB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE63EFCFAE33083BE48B7E /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9021177DBC962F57BBECA183 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0E74706CF46D2C975AC7652 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49717373C90874D504A25FC8;
+			remoteInfo = PhotoLab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		049A404EE38D27358AAE5D8A /* sample-2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = "sample-2.jpg"; path = "Fixtures/sample-2.jpg"; sourceTree = "<group>"; };
+		049B211B53A98808DA277421 /* PhotoLabApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotoLabApp.swift; sourceTree = "<group>"; };
+		0FCC17DDBFFF2AA942E283DE /* CameraPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		2A368D5290A82BA6BA3288DA /* EditorStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditorStore.swift; sourceTree = "<group>"; };
+		3343E2A679836AB0B7321E34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		356013D0F157FED852C01CD4 /* ImageEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageEngine.swift; sourceTree = "<group>"; };
+		3ABDA01A51DF55BC25B5B17B /* PhotoLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AE63EFCFAE33083BE48B7E /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81D8FA34BD0D959852B1056C /* sample-1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = "sample-1.jpg"; path = "Fixtures/sample-1.jpg"; sourceTree = "<group>"; };
+		928C620FC7ED2C4453E6526F /* EditorModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditorModels.swift; sourceTree = "<group>"; };
+		9F939E2A7CC30C0CC9D9A4BE /* ImageEngineTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageEngineTests.swift; sourceTree = "<group>"; };
+		F01EEDD9A16AB9C38139AE51 /* PhotoLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13ADEA51A415395F2667EF30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C9FF5A949D183105A471CCB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE8A66E505ADF4FAD8B0E3C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0E0E6B6729934603BE0AD22 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		101F978FFCCAB62F50E8DBC3 /* PhotoLabTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F939E2A7CC30C0CC9D9A4BE /* ImageEngineTests.swift */,
+				81D8FA34BD0D959852B1056C /* sample-1.jpg */,
+				049A404EE38D27358AAE5D8A /* sample-2.jpg */,
+			);
+			path = PhotoLabTests;
+			sourceTree = "<group>";
+		};
+		2EC1B161B814A9F0DF9A889C = {
+			isa = PBXGroup;
+			children = (
+				BAA4CF9EC5BE443519D9B287 /* Products */,
+				6CB6F3BE20B2AB40AA766B79 /* Frameworks */,
+				33DEE9B6A59C1E917734E8DC /* PhotoLab */,
+				101F978FFCCAB62F50E8DBC3 /* PhotoLabTests */,
+			);
+			sourceTree = "<group>";
+		};
+		33DEE9B6A59C1E917734E8DC /* PhotoLab */ = {
+			isa = PBXGroup;
+			children = (
+				7D20FCDC306FD7CF00BA3A84 /* Editor */,
+				7D20FCDB306FD79E00BA3A84 /* Views */,
+				049B211B53A98808DA277421 /* PhotoLabApp.swift */,
+			);
+			path = PhotoLab;
+			sourceTree = "<group>";
+		};
+		6CB6F3BE20B2AB40AA766B79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD11E26D641778239E37656C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D20FCDB306FD79E00BA3A84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FCC17DDBFFF2AA942E283DE /* CameraPicker.swift */,
+				41AE63EFCFAE33083BE48B7E /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D20FCDC306FD7CF00BA3A84 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				928C620FC7ED2C4453E6526F /* EditorModels.swift */,
+				2A368D5290A82BA6BA3288DA /* EditorStore.swift */,
+				356013D0F157FED852C01CD4 /* ImageEngine.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		BAA4CF9EC5BE443519D9B287 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3ABDA01A51DF55BC25B5B17B /* PhotoLab.app */,
+				F01EEDD9A16AB9C38139AE51 /* PhotoLabTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD11E26D641778239E37656C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3343E2A679836AB0B7321E34 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40D4B54C3C850C46B1C7C1C5 /* PhotoLabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A331251388462DCCF242E0 /* Build configuration list for PBXNativeTarget "PhotoLabTests" */;
+			buildPhases = (
+				3A46D1B648F5A26B5B0801EA /* Sources */,
+				BE8A66E505ADF4FAD8B0E3C7 /* Frameworks */,
+				C9732905DFC305A1AF31153C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB33BF3324AAB7BCF3743440 /* PBXTargetDependency */,
+			);
+			name = PhotoLabTests;
+			productName = PhotoLabTests;
+			productReference = F01EEDD9A16AB9C38139AE51 /* PhotoLabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49717373C90874D504A25FC8 /* PhotoLab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4DA3119E347960DCA697536 /* Build configuration list for PBXNativeTarget "PhotoLab" */;
+			buildPhases = (
+				8985D4BD615C4659C68AF8FE /* Sources */,
+				13ADEA51A415395F2667EF30 /* Frameworks */,
+				859672C0596515A5F4BB9CC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoLab;
+			productName = PhotoLab;
+			productReference = 3ABDA01A51DF55BC25B5B17B /* PhotoLab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0E74706CF46D2C975AC7652 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = B71617059456E5A613153308 /* Build configuration list for PBXProject "PhotoLab" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2EC1B161B814A9F0DF9A889C;
+			productRefGroup = BAA4CF9EC5BE443519D9B287 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49717373C90874D504A25FC8 /* PhotoLab */,
+				40D4B54C3C850C46B1C7C1C5 /* PhotoLabTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		859672C0596515A5F4BB9CC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9732905DFC305A1AF31153C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A81660AC556EEC1EB4445FE /* sample-1.jpg in Resources */,
+				6DE18989831BBD6C218ECF95 /* sample-2.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A46D1B648F5A26B5B0801EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632ADF2A84F58B893A68766F /* ImageEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8985D4BD615C4659C68AF8FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22A242861B902DF7C9A27B1 /* CameraPicker.swift in Sources */,
+				FD0F8C19426D610F69D61ABB /* ContentView.swift in Sources */,
+				67D2114362B9A48F05506B56 /* EditorModels.swift in Sources */,
+				29199AFCC2EC5122025DE1FC /* EditorStore.swift in Sources */,
+				EA0FAC1CB5A6F8088C1146A2 /* ImageEngine.swift in Sources */,
+				A3E92230BD5D7BEF10C25F2A /* PhotoLabApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB33BF3324AAB7BCF3743440 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PhotoLab;
+			target = 49717373C90874D504A25FC8 /* PhotoLab */;
+			targetProxy = 9021177DBC962F57BBECA183 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		261C197853EB1B0DCBC92482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				DEVELOPMENT_TEAM = TBBZBB993Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take a photo to edit in PhotoLab.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PhotoLabDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30EE41C6027229B070F32DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		4741D70517F392A4A8306122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		59AC1FDAC5A1D0B98A941D9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PhotoLabDemoTests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoLab.app/PhotoLab";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59DF0A993B17AE63B9370249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PhotoLabDemoTests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoLab.app/PhotoLab";
+			};
+			name = Debug;
+		};
+		DE752103A59C040FF1987C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				DEVELOPMENT_TEAM = TBBZBB993Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take a photo to edit in PhotoLab.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PhotoLabDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B71617059456E5A613153308 /* Build configuration list for PBXProject "PhotoLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30EE41C6027229B070F32DAD /* Debug */,
+				4741D70517F392A4A8306122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4DA3119E347960DCA697536 /* Build configuration list for PBXNativeTarget "PhotoLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				261C197853EB1B0DCBC92482 /* Release */,
+				DE752103A59C040FF1987C33 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A331251388462DCCF242E0 /* Build configuration list for PBXNativeTarget "PhotoLabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59AC1FDAC5A1D0B98A941D9A /* Release */,
+				59DF0A993B17AE63B9370249 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0E74706CF46D2C975AC7652 /* Project object */;
+}
