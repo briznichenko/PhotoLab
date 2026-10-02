@@ -20,12 +20,14 @@ final class EditorStore {
     var isBusy = false
     var issue: String?
 
-    var activePhoto: Photo? { photos[activeSlot] }
+    var activePhoto: Photo? { photo(at: activeSlot) }
+
+    func photo(at slot: Int) -> Photo? { photos[safe: slot] ?? nil }
 
     func importSelection(_ selection: PhotosPickerItem?, into slot: Int) async {
         guard let selection else { return }
         let token = UUID()
-        loadTokens[slot] = token
+        guard loadTokens.replaceIfPresent(token, at: slot) else { return }
         isBusy = true
         issue = nil
 
@@ -37,39 +39,44 @@ final class EditorStore {
             try await acceptPhoto(at: imported.url, slot: slot, token: token)
         } catch is CancellationError {
         } catch {
-            if loadTokens[slot] == token { issue = error.localizedDescription }
+            if loadTokens[safe: slot] == token { issue = error.localizedDescription }
         }
-        if loadTokens[slot] == token { isBusy = false }
+        if loadTokens[safe: slot] == token { isBusy = false }
     }
 
     func importCameraImage(_ image: UIImage) async {
         let token = UUID()
-        loadTokens[0] = token
+        guard loadTokens.replaceIfPresent(token, at: 0) else { return }
         isBusy = true
         issue = nil
         do {
             guard let data = image.jpegData(compressionQuality: 0.95) else {
                 throw EditorIssue.unsupportedImage
             }
-            let folder = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            let folder = try FileManager.default.url(
+                for: .applicationSupportDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: true
+            )
                 .appendingPathComponent("PhotoLab Imports", isDirectory: true)
             try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
             let url = folder.appendingPathComponent(UUID().uuidString + ".jpg")
             try data.write(to: url, options: .atomic)
             try await acceptPhoto(at: url, slot: 0, token: token)
         } catch {
-            if loadTokens[0] == token { issue = error.localizedDescription }
+            if loadTokens[safe: 0] == token { issue = error.localizedDescription }
         }
-        if loadTokens[0] == token { isBusy = false }
+        if loadTokens[safe: 0] == token { isBusy = false }
     }
 
     private func acceptPhoto(at url: URL, slot: Int, token: UUID) async throws {
         let previews = try await engine.makePreviews(at: url)
-        guard loadTokens[slot] == token, !Task.isCancelled,
+        guard loadTokens[safe: slot] == token, !Task.isCancelled,
               let thumbnail = UIImage(data: previews.thumbnail),
               let preview = UIImage(data: previews.preview) else { return }
 
-        photos[slot] = Photo(url: url, thumbnail: thumbnail, preview: preview)
+        guard photos.replaceIfPresent(Photo(url: url, thumbnail: thumbnail, preview: preview), at: slot) else { return }
         activeSlot = slot
         comparison = nil
         exportURL = nil
@@ -80,31 +87,31 @@ final class EditorStore {
             await analyzeFirst()
             await refreshPreview()
         }
-        if photos[0] != nil, photos[1] != nil {
+        if photo(at: 0) != nil, photo(at: 1) != nil {
             await comparePhotos()
         }
     }
 
     func analyzeFirst() async {
-        guard let photo = photos[0] else { return }
+        guard let photo = photo(at: 0) else { return }
         let id = photo.id
         do {
             let result = try await engine.analyze(at: photo.url)
-            if photos[0]?.id == id { analysis = result }
+            if self.photo(at: 0)?.id == id { analysis = result }
         } catch {
-            if photos[0]?.id == id { issue = error.localizedDescription }
+            if self.photo(at: 0)?.id == id { issue = error.localizedDescription }
         }
     }
 
     func comparePhotos() async {
-        guard let first = photos[0], let second = photos[1] else { return }
+        guard let first = photo(at: 0), let second = photo(at: 1) else { return }
         let token = UUID()
         comparisonToken = token
         let firstID = first.id
         let secondID = second.id
         do {
             let result = try await engine.compare(first: first.url, second: second.url)
-            if comparisonToken == token, photos[0]?.id == firstID, photos[1]?.id == secondID {
+            if comparisonToken == token, photo(at: 0)?.id == firstID, photo(at: 1)?.id == secondID {
                 comparison = result
             }
         } catch {
@@ -113,17 +120,17 @@ final class EditorStore {
     }
 
     func refreshPreview() async {
-        guard let photo = photos[0] else { return }
+        guard let photo = photo(at: 0) else { return }
         let id = photo.id
         let revision = renderRevision
         do {
             try await Task.sleep(for: .milliseconds(180))
             let data = try await engine.render(at: photo.url, settings: settings, maxPixel: 1600)
-            guard photos[0]?.id == id, renderRevision == revision, !Task.isCancelled else { return }
+            guard self.photo(at: 0)?.id == id, renderRevision == revision, !Task.isCancelled else { return }
             editedPreview = UIImage(data: data)
         } catch is CancellationError {
         } catch {
-            if photos[0]?.id == id, renderRevision == revision { issue = error.localizedDescription }
+            if self.photo(at: 0)?.id == id, renderRevision == revision { issue = error.localizedDescription }
         }
     }
 
@@ -158,7 +165,7 @@ final class EditorStore {
     }
 
     func export() async {
-        guard let photo = photos[0] else { return }
+        guard let photo = photo(at: 0) else { return }
         isBusy = true
         issue = nil
         do {

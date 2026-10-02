@@ -9,7 +9,12 @@ struct ImportedPhoto: Transferable {
 
     static var transferRepresentation: some TransferRepresentation {
         FileRepresentation(importedContentType: .image) { received in
-            let folder = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            let folder = try FileManager.default.url(
+                for: .applicationSupportDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: true
+            )
                 .appendingPathComponent("PhotoLab Imports", isDirectory: true)
             try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
             let name = UUID().uuidString + "." + received.file.pathExtension
@@ -70,5 +75,18 @@ enum EditorIssue: LocalizedError {
         case .unsupportedImage: "The selected image could not be decoded."
         case .failedToRender: "The image could not be rendered."
         }
+    }
+}
+
+extension Array {
+    subscript(safe index: Int) -> Element? {
+        indices.contains(index) ? self[index] : nil
+    }
+
+    @discardableResult
+    mutating func replaceIfPresent(_ element: Element, at index: Int) -> Bool {
+        guard indices.contains(index) else { return false }
+        self[index] = element
+        return true
     }
 }

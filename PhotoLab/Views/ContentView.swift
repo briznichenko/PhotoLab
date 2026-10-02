@@ -17,14 +17,14 @@ struct ContentView: View {
                     PhotoSelectionView(
                         firstSelection: $firstSelection,
                         secondSelection: $secondSelection,
-                        firstPhoto: store.photos[0],
-                        secondPhoto: store.photos[1],
+                        firstPhoto: store.photo(at: 0),
+                        secondPhoto: store.photo(at: 1),
                         onCamera: { showingCamera = true }
                     )
-                    if let photo = store.photos[0] {
+                    if let photo = store.photo(at: 0) {
                         PhotoEditingView(photo: photo, store: store, onInspect: { showingInspector = true })
                     }
-                    if let first = store.photos[0], let second = store.photos[1] {
+                    if let first = store.photo(at: 0), let second = store.photo(at: 1) {
                         PhotoComparisonView(
                             first: first,
                             second: second,
@@ -54,7 +54,7 @@ struct ContentView: View {
             Text(store.issue ?? "")
         }
         .sheet(isPresented: $showingInspector) {
-            if let image = store.editedPreview ?? store.photos[0]?.preview {
+            if let image = store.editedPreview ?? store.photo(at: 0)?.preview {
                 NavigationStack {
                     ZoomImage(image: image, scale: $comparisonState.primaryScale, pan: $comparisonState.primaryPan)
                         .background(.black)
